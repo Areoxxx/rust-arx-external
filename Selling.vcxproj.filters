@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Driver">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GUI">
+      <UniqueIdentifier>{B1C1C1C1-0001-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Config">
+      <UniqueIdentifier>{B1C1C1C1-0002-0002-0002-000000000002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Security">
+      <UniqueIdentifier>{B1C1C1C1-000B-000B-000B-00000000000B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Utils">
+      <UniqueIdentifier>{B1C1C1C1-000E-000E-000E-00000000000E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{B1C1C1C1-0004-0004-0004-000000000004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Classes">
+      <UniqueIdentifier>{B1C1C1C1-0005-0005-0005-000000000005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Unity">
+      <UniqueIdentifier>{B1C1C1C1-0006-0006-0006-000000000006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Features">
+      <UniqueIdentifier>{B1C1C1C1-0007-0007-0007-000000000007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threads">
+      <UniqueIdentifier>{B1C1C1C1-0008-0008-0008-000000000008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Overlay">
+      <UniqueIdentifier>{B1C1C1C1-0009-0009-0009-000000000009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Overlay\Visuals">
+      <UniqueIdentifier>{B1C1C1C1-000A-000A-000A-00000000000A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{B1C1C1C1-000C-000C-000C-00000000000C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{B1C1C1C1-000D-000D-000D-00000000000D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\ImGui">
+      <UniqueIdentifier>{ad26b2b7-1c60-496e-b3f0-4dfb14de2d9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\ImGui\Backends">
+      <UniqueIdentifier>{B1C1C1C1-0003-0003-0003-000000000003}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\gui.cpp">
+      <Filter>Source\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\driver.cpp">
+      <Filter>Source\Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Config\Config.cxx">
+      <Filter>Source\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\imgui.cpp">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\imgui_draw.cpp">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\imgui_freetype.cpp">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\imgui_tables.cpp">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\imgui_widgets.cpp">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\backends\imgui_impl_dx11.cpp">
+      <Filter>ThirdParty\ImGui\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGui\backends\imgui_impl_win32.cpp">
+      <Filter>ThirdParty\ImGui\Backends</Filter>
+    </ClCompile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="Source\Includes.hxx">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\gui.h">
+      <Filter>Source\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\gui_colors.h">
+      <Filter>Source\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\driver.h">
+      <Filter>Source\Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Config\Config.hxx">
+      <Filter>Source\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\decrypts.hpp">
+      <Filter>Source\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Security\Callstack_Spoofer.hpp">
+      <Filter>Source\Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Security\Lazy_Importer.hpp">
+      <Filter>Source\Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Security\Xorstr.hpp">
+      <Filter>Source\Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Decryption.hxx">
+      <Filter>Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Maths.hxx">
+      <Filter>Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Offsets.hxx">
+      <Filter>Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Utils.hxx">
+      <Filter>Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\BasePlayer.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\BaseMovement.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\Cache.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\HeldItem.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\PlayerEyes.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\PlayerInput.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\PlayerModel.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\Players.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\World.hxx">
+      <Filter>SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Unity\Camera.hxx">
+      <Filter>SDK\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Unity\Structs.hxx">
+      <Filter>SDK\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Unity\Transform.hxx">
+      <Filter>SDK\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Unity\Unity.hxx">
+      <Filter>SDK\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Features\Environment.hxx">
+      <Filter>SDK\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Features\Movement.hxx">
+      <Filter>SDK\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads\Aimbot.hxx">
+      <Filter>Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads\Chams.hxx">
+      <Filter>Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads\Misc.hxx">
+      <Filter>Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads\Update.hxx">
+      <Filter>Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\Overlay.hxx">
+      <Filter>Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\ItemIcons.hxx">
+      <Filter>Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\Visuals\Visuals.hxx">
+      <Filter>Overlay\Visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\font.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\filledboximage.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGui\imgui.h">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGui\imgui_internal.h">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGui\imgui_freetype.h">
+      <Filter>ThirdParty\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGui\backends\imgui_impl_dx11.h">
+      <Filter>ThirdParty\ImGui\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGui\backends\imgui_impl_win32.h">
+      <Filter>ThirdParty\ImGui\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\json.hpp">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\stb_image.h">
+      <Filter>ThirdParty</Filter>
+    </ClInclude>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Library Include="$(ProjectDir)ThirdParty\freetype\win64\freetype.lib" />
+  </ItemGroup>
+</Project>

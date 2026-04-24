@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9F316E83-5AE5-4939-A723-305A94F48005}</ProjectGuid>
+    <RootNamespace>Selling</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Selling</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Configuration)\</IntDir>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)ThirdParty\freetype\include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)ThirdParty\freetype\win64;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <TargetName>Selling</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;.\Source;.\Resources;.\ThirdParty\ImGui;.\ThirdParty\ImGui\backends;$(ProjectDir)ThirdParty\freetype\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxgi.lib;freetype64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x64;$(ProjectDir)ThirdParty\freetype\win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.;.\Source;.\Resources;.\ThirdParty\ImGui;.\ThirdParty\ImGui\backends;$(ProjectDir)ThirdParty\freetype\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxgi.lib;freetype64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x64;$(ProjectDir)ThirdParty\freetype\win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ThirdParty\ImGui\imgui.h" />
+    <ClInclude Include="ThirdParty\ImGui\imgui_freetype.h" />
+    <ClInclude Include="ThirdParty\ImGui\imgui_internal.h" />
+    <ClInclude Include="ThirdParty\ImGui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="ThirdParty\ImGui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Source\decrypts.hpp" />
+    <ClInclude Include="Overlay\ItemIcons.hxx" />
+    <ClInclude Include="Overlay\Overlay.hxx" />
+    <ClInclude Include="Overlay\Visuals\Visuals.hxx" />
+    <ClInclude Include="Source\driver.h" />
+    <ClInclude Include="Resources\filledboximage.h" />
+    <ClInclude Include="Resources\font.h" />
+    <ClInclude Include="Source\gui.h" />
+    <ClInclude Include="Source\gui_colors.h" />
+    <ClInclude Include="Source\Config\Config.hxx" />
+    <ClInclude Include="Source\Security\Callstack_Spoofer.hpp" />
+    <ClInclude Include="Source\Security\Lazy_Importer.hpp" />
+    <ClInclude Include="Source\Security\Xorstr.hpp" />
+    <ClInclude Include="Source\Utils\Decryption.hxx" />
+    <ClInclude Include="Source\Utils\Maths.hxx" />
+    <ClInclude Include="Source\Utils\Offsets.hxx" />
+    <ClInclude Include="Source\Utils\Utils.hxx" />
+    <ClInclude Include="Source\Includes.hxx" />
+    <ClInclude Include="ThirdParty\json.hpp" />
+    <ClInclude Include="ThirdParty\stb_image.h" />
+    <ClInclude Include="SDK\Classes\BaseMovement.hxx" />
+    <ClInclude Include="SDK\Classes\BasePlayer.hxx" />
+    <ClInclude Include="SDK\Classes\Cache.hxx" />
+    <ClInclude Include="SDK\Classes\HeldItem.hxx" />
+    <ClInclude Include="SDK\Classes\PlayerEyes.hxx" />
+    <ClInclude Include="SDK\Classes\PlayerInput.hxx" />
+    <ClInclude Include="SDK\Classes\PlayerModel.hxx" />
+    <ClInclude Include="SDK\Classes\Players.hxx" />
+    <ClInclude Include="SDK\Classes\World.hxx" />
+    <ClInclude Include="SDK\Features\Environment.hxx" />
+    <ClInclude Include="SDK\Features\Movement.hxx" />
+    <ClInclude Include="SDK\Unity\Camera.hxx" />
+    <ClInclude Include="SDK\Unity\Structs.hxx" />
+    <ClInclude Include="SDK\Unity\Transform.hxx" />
+    <ClInclude Include="SDK\Unity\Unity.hxx" />
+    <ClInclude Include="Threads\Aimbot.hxx" />
+    <ClInclude Include="Threads\Chams.hxx" />
+    <ClInclude Include="Threads\Misc.hxx" />
+    <ClInclude Include="Threads\Update.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ThirdParty\ImGui\imgui.cpp" />
+    <ClCompile Include="ThirdParty\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ThirdParty\ImGui\imgui_freetype.cpp" />
+    <ClCompile Include="ThirdParty\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="ThirdParty\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="ThirdParty\ImGui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ThirdParty\ImGui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Source\gui.cpp" />
+    <ClCompile Include="Source\Config\Config.cxx" />
+    <ClCompile Include="Source\driver.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="$(ProjectDir)ThirdParty\freetype\win64\freetype.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
